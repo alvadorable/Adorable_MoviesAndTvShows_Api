@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yozora — Anime Movies &amp; Shows</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">映画とアニメ &nbsp;/&nbsp; TMDB archive</p>
+      <h1 class="hero-title">YOZORA</h1>
+      <p class="hero-sub">A quiet corner of the night sky for the movies and shows worth watching.</p>
+
+      <form id="search-form" class="search-bar" autocomplete="off">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Search a title — Spirited Away, Naruto, Jujutsu Kaisen..."
+        />
+        <button type="submit">Search</button>
+      </form>
+
+      <div class="filter-row">
+        <button class="filter-btn active" data-mode="discover" data-media="tv">Anime Shows</button>
+        <button class="filter-btn" data-mode="discover" data-media="movie">Anime Movies</button>
+        <button class="filter-btn" data-mode="top-rated" data-media="all">Top Rated</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="status-row">
+      <p id="status-text">Loading the shelf...</p>
+    </section>
+
+    <section id="grid" class="poster-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for the Third Party API Top 3 Challenge — data from <a href="https://www.themoviedb.org/" target="_blank" rel="noopener">TMDB</a>. This product uses the TMDB API but is not endorsed or certified by TMDB.</p>
+  </footer>
+
+  <div id="modal-overlay" class="modal-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="modal-close" class="modal-close" aria-label="Close details">×</button>
+      <div id="modal-body" class="modal-body">
+        <p>Loading...</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="script.js?v=6"></script>
+</body>
+</html>
