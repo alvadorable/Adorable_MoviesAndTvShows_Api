@@ -1,0 +1,7 @@
+// TMDB API configuration
+// 1. Get your own free key at https://www.themoviedb.org/settings/api
+// 2. Copy this file and rename the copy to "config.js"
+// 3. Paste your key in below
+// config.js is listed in .gitignore so your key never gets committed.
+
+const TMDB_API_KEY = "YOUR_KEY_HERE";
